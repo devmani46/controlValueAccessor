@@ -6,34 +6,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-custom-dropdown',
   standalone: true,
   imports: [CommonModule],
-  template: `
-    <div class="dropdown-wrapper">
-      <select
-        [value]="value"
-        (change)="onSelect($event)"
-        (blur)="onTouched()"
-        [disabled]="disabled"
-        class="dropdown"
-      >
-        <option value="" disabled>Select an option</option>
-        <option *ngFor="let option of options" [value]="option">
-          {{ option }}
-        </option>
-      </select>
-    </div>
-  `,
-  styles: [`
-    .dropdown {
-      padding: 8px;
-      border: 2px solid #28a745;
-      border-radius: 6px;
-      width: 100%;
-      background: #fff;
-    }
-    .dropdown:disabled {
-      background: #f0f0f0;
-    }
-  `],
+  templateUrl: './custom-dropdown.html',
+  styleUrl: './custom-dropdown.css',
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

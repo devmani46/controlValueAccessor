@@ -1,0 +1,10 @@
+.dropdown {
+      padding: 8px;
+      border: 2px solid #28a745;
+      border-radius: 6px;
+      width: 100%;
+      background: #fff;
+    }
+    .dropdown:disabled {
+      background: #f0f0f0;
+    }
